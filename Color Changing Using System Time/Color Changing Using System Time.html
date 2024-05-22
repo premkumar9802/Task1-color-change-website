@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+   <title>TASK 1</title>
+        <style id="style-1">
+             body { background-color: #7cb4df; color: #000000; }
+        </style>
+</head>
+<body>
+  <text-align: bottom center>
+  <center>
+        <h1> NullClass Intership Task-01 </h1>
+        <h2> <b> Change website Color Using System Time </b> </h2>
+  </center>
+</text-align:>
+  <script>
+    function setTheme(Stheme) {
+      const themest = document.getElementById('style-1');
+      if (Stheme === 'light') {
+        themest.innerHTML = `
+          body { background-color: #7cb4df; color: #000000; }
+        `;
+      } else if (Stheme === 'dark') {
+        themest.innerHTML = `
+          body { background-color: #000000; color: #7cb4df; }        `;
+      }
+    }
+    const currenttime = new Date().getHours();
+    const isDaytime = currenttime >= 6 && currenttime < 18;
+    setTheme(isDaytime ? 'light' : 'dark');
+  </script>
+</body>
+</html>
